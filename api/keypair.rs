@@ -25,7 +25,7 @@ pub async fn handler(req: Request) -> Result<Response<Body>, Error> {
                 json!({
                     "success": false,
                     "error": "Method not allowed"
-                })
+                }) 
                 .to_string()
                 .into(),
             )?);
