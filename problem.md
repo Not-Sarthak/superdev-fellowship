@@ -26,7 +26,7 @@ All endpoints return JSON responses in the following format:
 
 ### Error Response ( Status: 400)
 
-```json
+```json 
 {
   "success": false,
   "error": "Description of error"
