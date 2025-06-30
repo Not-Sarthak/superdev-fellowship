@@ -98,7 +98,6 @@ pub fn verify_signature(message: &str, signature_str: &str, pubkey_str: &str) ->
     Ok(public_key.verify(message_bytes, &signature).is_ok())
 }
 
-/// Validate message content and length
 fn validate_message(message: &str) -> Result<()> {
     if message.is_empty() {
         return Err(anyhow!("Message cannot be empty"));

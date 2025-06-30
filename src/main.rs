@@ -18,15 +18,15 @@ async fn main() {
         .route("/keypair", post(handlers::generate_keypair))
         .route("/token/create", post(handlers::create_token))
         // .route("/token/mint", post(handlers::mint_token))
-        .route("/message/sign", post(handlers::sign_message));
-        // .route("/message/verify", post(handlers::verify_message))
+        .route("/message/sign", post(handlers::sign_message))
+        .route("/message/verify", post(handlers::verify_message));
         // .route("/send/sol", post(handlers::send_sol))
         // .route("/send/token", post(handlers::send_token));
 
     let port = env::var("PORT")
         .unwrap_or_else(|_| "8080".to_string())
         .parse::<u16>()
-        .expect("PORT must be a valid number");
+        .expect("PORT Must be a Valid Number");
 
     let addr = SocketAddr::from(([0, 0, 0, 0], port));
     println!("Server Listening on {}", addr);
