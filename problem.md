@@ -4,7 +4,7 @@
 
 Build a **Rust-based HTTP server** exposing **Solana-related endpoints**. The server provides functionality to generate keypairs, handle SPL tokens, sign/verify messages, and construct valid on-chain instructions.
 
-## HTTP-URL
+## HTTP-URL 
 
 ```
 https://superdev-fellowship.vercel.app/api
